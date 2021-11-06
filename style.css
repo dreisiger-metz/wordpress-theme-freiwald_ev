@@ -1,0 +1,452 @@
+/*
+Theme Name: Freiwald WP
+Author: Peter Dreisiger
+Text Domain: freiwaldwp
+Description: A Bootstrap-based theme for the freiwald-ev.de website
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+/* == 'main' styles (i.e. text styles, ui elements, etc.)=================== */
+
+html {
+  --background-dark:  #23282d;  /* also for the navbar */
+  --background-light: #f2f2f2;
+  --forest-green:     #126e20;
+  --freiwald-green:   #6e8f3d;
+  --healthier-green:  #508f3d;
+  --forest-brown:     #6b4201;
+}
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #f2f2f2 !important;
+	font-size: 16px;
+	color: #4c4c4c;
+	font-weight: 300;
+}
+
+h3 {
+	font-weight: 300;
+	font-family: "Open Sans",sans-serif !important;
+	color: #4e4e4e;
+	font-size: 22px;
+	margin-bottom: 30px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+section, .text-muted {
+	padding-bottom: 50px !important;
+	padding-top: 50px !important;
+}
+
+section.frontpage-othertext {
+	background: #FFF;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #6e8f3d;
+	color: #FFF;
+	text-align: center;
+	height: 100%;
+}
+
+.jumbotron h1 {
+	font-size: 64px;
+	font-weight: 300;
+	color: #FFF;
+}
+
+.table-bordered {
+	border: 1px solid #ccc;
+}
+
+
+a {
+	color: #000;
+/*	text-decoration: underline; */
+}
+
+/*a:active, a:focus, a, a:hover {
+	text-decoration: none !important;
+}
+*/
+
+.page-link {
+	color: #333;
+}
+
+.page-item.active .page-link {
+	background-color: #ed9f29;
+	border-color: #ed9f29;
+}
+
+
+.bg-faded {
+	background-color: #24292e;
+	/* border-bottom: 0px solid; */
+	/* border-color: rgba(255,255,255, 0.3) */
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+
+button {
+	cursor: pointer;
+}
+
+.btn-primary {
+	display: inline-block;
+	font-size: 18px;
+	color: #9e9e9e;
+	height: 3.33333em;
+	width: auto;
+	line-height: 3.1;
+	padding: 0 1.5em;
+	border: 2px solid;
+	border-color: #ccc;
+	border-width: 2px!important;
+	border-radius: 2.77778em;
+	border-radius: 1em;
+	background: none;
+}
+.btn-primary:hover, .btn-outline-success:hover {
+	color: #FFF;
+	background: #6e8f3d;
+	border-color: #6e8f3d;
+}
+
+.btn-outline-success {
+	color: #6e8f3d;
+	background-image: none;
+	background-color: transparent;
+	border-color: #6e8f3d;
+}
+
+/*
+.btn-group-justified {
+	display: flex ;
+	flex-flow: row nowarp;
+}
+.btn-group-justified > .btn{
+	flex: 1 1 auto;
+}
+
+.btn-sm {
+	line-height: 0.8em;
+	height: 2em;
+	padding: 0 0.8em;
+	font-size: 14px;
+}
+
+.buttoninline {
+	display: inline-block;
+}
+*/
+
+.box{
+	position: relative;
+	width: 100%;
+	float: left;
+	margin-bottom: 5%;
+}
+.box:hover{
+	width: 110%;
+	margin-left: -5%;
+	margin-top: -5%;
+	margin-bottom: 0%;
+
+	-webkit-transition: width 0.3s, margin 0.3s;
+	transition: width 0.3s, margin 0.3s;
+}
+.box:before{
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+.box h4 {
+	font-size: 16px;
+  padding-top: 10px;
+}
+
+
+.middle {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	text-align: center;
+	font-size: 35px;
+}
+
+
+/*.boxtop {
+	background: #000 !important;
+}
+
+.boxtop:hover {
+	background: #333 !important;
+	margin-left: -10%;
+	margin-top: -10%;
+	height: 120& !important;
+	width: 120% !important;
+}
+*/
+
+
+/* == nav-related styles =================================================== */
+.navbar .navbar-brand, .navbar .navbar-brand:hover {
+  font-size: 24px;
+	/* font-weight: 300; */
+	color: #FFF;
+}
+
+.navbar .navbar-brand {
+	padding-top: 2px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,0.75);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+	color: rgba(255,255,255,1);
+}
+
+.navbar-light .navbar-nav .active .nav-link {
+	font-family: 'Roboto', sans-serif;
+	color: rgba(255,255,255,1);
+}
+
+.navbar-light .navbar-toggler {
+	/* background: rgba(255,255,255,0.8); */
+	background: #23282d;
+	border-color: #ccc;
+}
+
+.navbar-toggler-icon {
+	color: #9e9e9e;
+}
+
+.navfooter {
+	width: 100%;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 0px;
+}
+
+.navfooter li {
+	display: inline-block;
+	list-style: none;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+
+
+
+/* == post-related styles ================================================== */
+.post-title {
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	min-height: 30px;
+	color: #4e4e4e;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+  /* margin-bottom: 25px; */
+	/* padding-top: 10px; */
+	padding-bottom: 10px;
+}
+
+.post-teaser{
+	min-height: 100px;
+}
+
+.post-heading {
+	margin-top: 30px;
+	font-size: 40px;
+	font-weight: 700;
+	/* text-transform: uppercase; */
+}
+
+.post-meta{
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+.post-body {
+	margin-bottom: 25px;
+	/* font-family: Georgia; */
+}
+
+.post-meta {
+	font-family: 'Roboto', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+}
+
+.postmeta {
+	font-size: 12px;
+}
+
+.posttag {
+	background: #ccc;
+	padding: 3px 8px 3px 8px;
+	border-radius: 3px;
+	float: left;
+	margin-right: 8px;
+	margin-bottom: 8px;
+}
+
+
+
+
+/* == donation-related styles ============================================== */
+.spendenzahl {
+	display: inline;
+	background: none;
+	border-radius: 4em;
+	border: 2px solid;
+	display: inline-block;
+	height: 2.33333em;
+	line-height: 2.1;
+	padding: 0 0.5em;
+	width: auto;
+}
+
+.spendenzahl:hover {
+	background: #000;
+	color: #FFF;
+}
+
+.progress {
+	border-radius: 0px;
+	background-color: #000;
+}
+
+
+.videoWrapper {
+	margin-top: 15px;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.card-body {
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	padding: 1.25rem;
+}
+
+input.form-control-danger{
+	border: 1px solid #ed9f29;
+}
+
+.message{
+	margin: 10px 0;
+}
+
+.message.light{
+	color: #efefef;
+}
+
+.responsive-video {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 0px;
+	height: 0;
+	overflow: hidden;
+}
+
+.responsive-video > iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/*
+@media (max-width: 991px) {
+	.post-heading {
+		font-size: 30px !important;
+	}
+}
+
+
+@media (max-width: 991px) {
+	.hidemobile {
+		display: none !important;
+	}
+	.text1{
+		font-size: 35px;
+	}
+}
+
+
+@media (min-width: 992px) {
+	.hidedesktop {
+		display: none !important;
+	}
+	.text1{
+		font-size: 65px;
+	}
+}
+*/
+
+.wpcf7, .mc4wp-form {
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* .wpcf7 label, .wpcf7 input, .wpcf7 .wpcf7-textarea, .mc4wp-form, .mc4wp-form label, .mc4wp-form .form-control { */
+.wpcf7 label, .wpcf7 input, .wpcf7 .wpcf7-textarea, .mc4wp-form, .mc4wp-form label {
+	width: 100%;
+}
+
+.wpcf7 input, .mc4wp-form-fields label input {
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: .25rem;
+}
+
+.wpcf7 .wpcf7-submit {
+}
+
+.mc4wp-alert {
+	text-align: center;
+	padding-top: 20px;
+}
